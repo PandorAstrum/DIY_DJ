@@ -12,4 +12,4 @@ branches:
     - dev
 
 script:
-  - docker-compose run backend sh -c "flake8 && pyhton manage.py test"
+  - docker-compose run backend sh -c "flake8 && python manage.py test"
