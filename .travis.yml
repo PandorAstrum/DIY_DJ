@@ -1,0 +1,15 @@
+language: python
+python:
+  - "3.9"
+
+before_script: pip install docker-compose
+
+branches:
+  only:
+    - master
+    - main
+  except:
+    - dev
+
+script:
+  - docker-compose run backend sh -c "flake8 && pyhton manage.py test"
